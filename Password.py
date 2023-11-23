@@ -39,8 +39,5 @@ class Password:
         self.notes = None
     
     def print(self):
-        print(f"Name: {self.name}")
-        print(f"Username: {self.username}")
-        print(f"Password: {self.password}")
-        print(f"Websites: {self.websites}")
-        print(f"Notes: {self.notes}")
+        for entry in self.__dict__.items():
+            print(f"{entry[0].capitalize()}: {entry[1]}")
